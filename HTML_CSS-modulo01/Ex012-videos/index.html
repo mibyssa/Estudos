@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos em HTML5 </title>
+</head>
+<body>
+    <h1>Inserindo videos hospedados localmente</h1>
+    <p>Este video está hospedado no meu proprio servidor</p>
+
+<video src="midia/meu-video.mp4" width="400" height="400" controls></video>
+<video src="midia/Meu-Video.webm" width="400" height="400" controls></video>
+<video src="midia/Meu-Video(1).mkv" width="400" height="400" controls> </video>
+
+<video width="300" poster="imagens/limoes.png" controls autoplay loop>
+    <source src="midia/Meu-Video.webm" type="video/webm">
+    <source src="midia/Meu-Video(1).mkv" type="video/mkv">
+    <source src="midia/meu-video.mp4" type="video/mp4">
+    <p>Seu navegador não tem compatibilidade com reprodução de videos. </p>
+
+</video>
+<h2>O ultimo video eu usei um poster de rpg para aparecer de cara no video. e coloquei os tres videos em uma tag so para rodar em todos os navegadores, especialmente no safari iphone. Atenção: Essa forma de inserir um video pode ter um custo alto.</h2>
+
+<h1>Inserindo videos do Youtube</h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FdE5G95B7Mg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p>Os videos do YouTube que são inseridos, quem paga a hospedagem é o proprio youtube. Tem a opção também do Vimeo, ele funciona muito bem tbm e a qualidade dos videos saos um pouco melhores. O Vimeo não aparece a opção de outros videos como o YouTube. para inserir so clicar em compartilhar e depois incorporar e copiar o codigo que eles proprio fornecem.</p>
+</body>
+</html>
