@@ -12,19 +12,40 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
         td,th {
-            border: 1px solid rgba(152, 21, 21, 0.795);
+            border: 1px solid rgba(197, 112, 112, 0.795);
             padding: 8px;   
             
         }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgb(212, 141, 115);
+        }
+
         thead, tfoot {
-            background-color: rgb(66, 26, 107);
+            background-color: rgba(27, 5, 48, 0.508);
             color: white;
         }
 
-        td.num {
+        thead > tr > th {
+            position: sticky;
+            top: 0;
+            background-color: rgb(192, 52, 164);
+        }
+
+        tbody > tr:nth-child(2n-1) {
+            background-color: rgba(112, 111, 112, 0.817);
+        }
+
+        td.num { 
             text-align: right;
+
+        
         }
     </style>
 </head>
@@ -33,23 +54,29 @@
     <!--
         Anatomia para tabelas grandes
         table 
+            CAPTION
             THEAD
                 TR, TD, TH
             TBODY
                 TR, TD, TH
             TFOOTER
                 TR, TD, TH
-
+    daddos da tabelas TD
+    Titulos das colunas TH
+    Legenda da tabela CAPTION
+    scope="col" - coluna
+    scope="row" - linha
     -->
     <table>
+        <caption>População dos estados brasileiros</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
         <tbody>
-          <tr>
+            <tr>
                 <td> Minas Gerais</td>
                 <td class="num">19 597 330</td>
             </tr>
@@ -69,12 +96,111 @@
                 <td>Paraná</td>
                 <td class="num">11 516 840</td>
             </tr>
-            
+            <tr>
+                <td> Minas Gerais</td>
+                <td class="num">19 597 330</td>
+            </tr>
+            <tr>
+                <td> Rio de Janeiro</td>
+                <td class="num">15 989 929</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14 016 906</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11 422 973</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11 516 840</td>
+            </tr>
+            <tr>
+                <td> Minas Gerais</td>
+                <td class="num">19 597 330</td>
+            </tr>
+            <tr>
+                <td> Rio de Janeiro</td>
+                <td class="num">15 989 929</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14 016 906</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11 422 973</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11 516 840</td>
+            </tr>
+            <tr>
+                <td> Minas Gerais</td>
+                <td class="num">19 597 330</td>
+            </tr>
+            <tr>
+                <td> Rio de Janeiro</td>
+                <td class="num">15 989 929</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14 016 906</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11 422 973</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11 516 840</td>
+            </tr>
+            <tr>
+                <td> Minas Gerais</td>
+                <td class="num">19 597 330</td>
+            </tr>
+            <tr>
+                <td> Rio de Janeiro</td>
+                <td class="num">15 989 929</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14 016 906</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11 422 973</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11 516 840</td>
+            </tr>
+            <tr>
+                <td> Minas Gerais</td>
+                <td class="num">19 597 330</td>
+            </tr>
+            <tr>
+                <td> Rio de Janeiro</td>
+                <td class="num">15 989 929</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14 016 906</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11 422 973</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11 516 840</td>
+            </tr>
         </tbody>
         <tfoot>
             <tr>
-                <td>Total de habitantes</td>
-                <td>49 604 165</td>
+                <th scope="row">Total de habitantes</th>
+                <td class="num"><strong>49 604 165</strong></td>
             </tr>
         </tfoot>
     </table>
