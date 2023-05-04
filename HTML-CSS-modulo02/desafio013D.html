@@ -5,22 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        :root {
+            --cor-fundo: #fff;
+            --cor-header: #7a7f7a;
+            --cor-letra: black;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        th, td {
+            width: 90px;
+            border: 1px solid  black;
+            text-align: center;
+            padding: 8px;
+        }
+        th {
+            background-color: #7a7f7a;
+            color: white;
+        }
+        td.cinza {
+            background-color: #7a7f7a;
+            color: white;
+        }
+        th.branco {
+            background-color: white;
+            color: black;
+        }
+    </style>
 </head>
+<!--
+    Colgroup "col" 'class.' pode ser usado para colorir uma coluna inteira, mas não é muito usado.
+    Rowgroup pode ser usado para colorir uma linha inteira, mas não é muito usado.
+    Usando a class.
+    -->
 <body>
     <table>
         <thead>
             <tr>
-                <th>Área</th>
-                <th>Disciplinas</th>
-                <th> Notas</th>
-                <th> Média</th>
+                <th rowspan="2" scope="col">Área</th>
+                <th rowspan="2" scope="col">Disciplinas</th>
+                <th colspan="2" scope="colgroup"> Notas</th>
+                <th rowspan="2" scope="col"> Média</th>
             </tr>
-            <th>Nota 1</th>
-            <th>Nota 2</th>
+            <th scope="col">Nota 1</th>
+            <th scope="col">Nota 2</th>
         </thead>
         <tbody>
             <tr>
-                <th> Exatas</th>
+                <th class="branco" rowspan="4" scope="rowgroup"> Exatas</th>
                 <td>Matematica</td>
                 <td>0.0</td>
                 <td>0.0</td>
@@ -45,11 +82,11 @@
                 <td>0.0</td>
             </tr>
             <tr>
-                <th>Medias de Exatas</th>
-                <td>0.0</td>
+                <th colspan="4" scope="row">Medias de Exatas</th>
+                <td class="cinza" >0.0</td>
             </tr>
             <tr>
-                <th>Humanas</th>
+                <th class="branco" rowspan="2" scope="rowgroup">Humanas</th>
                 <td>Historias</td>
                 <td>0.0</td>
                 <td>0.0</td>
@@ -64,10 +101,11 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Medias de Humanas</th>
-                <td>0.0</td>
+                <th colspan="4" scope="row">Medias de Humanas</th>
+                <td class="cinza">0.0</td>
             </tr>
         </tfoot>
     </table>
 </body>
-</html>
+</html>  
+ 
